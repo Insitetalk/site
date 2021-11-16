@@ -91,9 +91,10 @@ frontpage_cards:
     button_label: More publications
     button_link: 'https://insitetalk.github.io/site/publications/'
     rule_color: ''
-    rule_color: ''
   - title: Useful resources
     content: |
+      [The Sustainable Development Goals in Ghana](https://ghana.un.org/)
+      
       [The Global Goals](https://www.globalgoals.org/)
       
       [UN Department of Economic and Social Affairs](https://sustainabledevelopment.un.org/)
