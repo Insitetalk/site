@@ -87,10 +87,9 @@ frontpage_cards:
     content: |
       [UN Ghana Sustainable Development Partnership Framework with Ghana 2018-2022, June 2018](http://gh.one.un.org/content/dam/unct/ghana/docs/Delivering%20as%20One/UNCT-GH-UNSDP-2018.pdf)
       [National Strategy for the Development of Statistics, Ghana 2018-2022](http://www.statsghana.gov.gh/docfiles/publications/NSDS%20II%20Ghana_Revised_16.03.18.pdf)
-      
-       include: ''
+    include: ''
     button_label: More publications
-    button_link: '<a href="./publications" aria-label="More publications">More publications...</a>'
+    button_link: 'https://insitetalk.github.io/site/publications/'
     rule_color: ''
     rule_color: ''
   - title: Useful resources
