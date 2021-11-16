@@ -202,6 +202,8 @@ menu:
   - path: /faq
     translation_key: menu.faq
     dropdown: []
+  - path: /publications/
+    translation_key: menu.publications
   - path: /news
     translation_key: menu.updates
     dropdown: []
