@@ -43,3 +43,7 @@ exclude:
   - README
   - README.md
   - LICENSE
+
+
+#
+remote_data_prefix: https://insitetalk.github.io/data
