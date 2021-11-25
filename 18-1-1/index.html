@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20211125114621">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20211125121953">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/site/assets/css/custom.css?v=20211125114621"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/site/assets/css/custom.css?v=20211125121953"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -395,19 +395,19 @@ var translations = {
   data-id="18-1-1"
   data-country="Ghana"
   data-charttitle="Covid 19 Monitoring Dashboard"
-  data-charttitles="null"
+  data-charttitles="[]"
   data-measurementunit=""
   data-showdata="true"
   data-graphtype="line"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="null"
-  data-graphlimits="null"
+  data-showmap="false"
+  data-startvalues="[]"
+  data-graphlimits="[]"
   data-stackeddisaggregation=""
-  data-graphannotations="null"
+  data-graphannotations="[]"
   data-indicatordownloads="null"
   data-compositebreakdownlabel=""
-  data-precision="null"
+  data-precision="[]"
 >
   
   <span role="status" class="sr-only" id="indicator-data-view-status"></span>
@@ -512,7 +512,13 @@ var translations = {
   <div id="datatableFooter">
     
     
+    <p>Geographical Area: </p>
     
+    
+    <p>Unit of Measurement: </p>
+    
+    
+    <p>Footnote: </p>
     
   </div>
 
@@ -542,7 +548,13 @@ data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 >Table</a>
-  </li></ul>
+  </li><li role="presentation" class="nav-item embedded-map">
+      <a data-no-disagg="true" class="nav-link" data-toggle="tab" id="tab-embeddedmapview" href="#embeddedmapview" aria-controls="embeddedmapview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to embedded item tab"
+>Covid 19 Monitoring Dashboard</a>
+    </li></ul>
 
     <div class="tab-content data-view">
   <div role="tabpanel" class="tab-pane active" id="chartview">
@@ -844,6 +856,31 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="tableSelectionDownload" class="clearfix"></div>
 
   </div>
+  <div role="tabpanel" class="tab-pane" id="embeddedmapview" class="embedded-map">
+    <div class="row">
+  <div class="col-xs-12">
+    
+      <h3>Covid 19 Monitoring Dashboard</h3>
+    
+    
+      <div class="embedded-map" id="embeddedmapframe">
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script>document.querySelector("li.nav-item.embedded-map").addEventListener("click",function(){ var pymParent = new pym.Parent('embeddedmapframe', 'https://experience.arcgis.com/experience/f44d2c0b0099489c895c5cab86002ae6', {});})</script>
+      </div>
+    
+    
+    <div class="embedded-map" id="embeddedmapframe">
+    
+      <div id="embedfooter" class="table-footer-text">
+        <p><p>Covid 19 Monitoring Dashboard</p>
+</p>
+      </div>
+    
+  </div>
+</div>
+
+  </div>
+  
 </div>
 
 
@@ -1100,6 +1137,10 @@ data-event-label="Change to Sources tab"
             
             
 
+            
+              <a href="https://github.com/Insitetalk/data/commit/d65d23df344b2c030f643fcc1996a1232f6f4f0c" target="_blank">
+                2021-11-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              </a>
             
 
           
@@ -1832,7 +1873,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator number </th>
         <td>
           
-            
+            <p>Covid 19 Monitoring Dashboard</p>
 
           
         </td>
@@ -2174,6 +2215,8 @@ data-event-label="Change to Sources tab"
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js" integrity="sha512-9hzM/Gfa9KP1hSBlq3/zyNF/dfbcjAYwUTBWYX+xi8fzfAPHL3ILwS1ci0CTVeuXTGkRAWgRMZZwtSNV7P+nfw==" crossorigin="anonymous"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
@@ -2184,12 +2227,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20211125114621'></script>
+<script src='/site/assets/js/sdg.js?v=20211125121953'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20211125114621"></script><script>
+    <script src="/site/assets/js/custom.js?v=20211125121953"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
