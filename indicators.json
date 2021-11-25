@@ -2113,6 +2113,22 @@
   },
   {
     "goal": {
+      "id": "18",
+      "title": "global_goals.18-title",
+      "indicators": [
+        
+        {
+          "id": "18-1-1",
+          "title": "Covid 19 Monitoring Dashboard",
+          "description": "",
+          "keywords": "",
+          "href": "/site/18-1-1",
+          "status": "complete"
+        }]
+    }
+  },
+  {
+    "goal": {
       "id": "",
       "title": "",
       "indicators": [
