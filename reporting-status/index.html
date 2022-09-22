@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://insitetalk.github.io/data/en',
+  remoteDataBaseUrl: 'https://sdg-ghana.github.io/data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -40,6 +40,10 @@ var opensdg = {
 
   language: 'en',
 };
+
+// For backwards compatibility, some of these might need to be global.
+// @TODO: Remove these eventually.
+var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
 
 </script>
 
@@ -114,18 +118,22 @@ var translations = {
         <script src="/site/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/img/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/site/assets/img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/site/assets/img/favicons/favicon-16x16.png">
-<link rel="icon" type="image/x-icon" href="/site/assets/img/favicons/favicon.ico" />
+        
+
+
+
+
+<link rel="shortcut icon" type="image/ico" href="/site/assets/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="/site/assets/img/favicons/favicon.png">
 
 
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20220727102742">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20220922091530">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -133,12 +141,8 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20220727102742">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20220922091530">
         
-
-        <!--[if IE]>
-        <link rel="stylesheet" href="/site/assets/css/ie.css">
-        <![endif]-->
 
         
 
@@ -148,86 +152,206 @@ layout-reportingstatus
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_contacts.suggestions\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
-<div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
-    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
-</div>
+
+<script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-    
+  
 <div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
     
-    This is a development website. We welcome your <a href="mailto:%email_contacts.suggestions">feedback</a>.
+    This is a development website. We welcome your <a href="mailto:sdg.secretariat@statsghana.gov.gh">feedback</a>.
     
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/site/" id="home">
+<header role="banner" class="header-default">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/site/" id="home">
     <img src="/site/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/goals">Goals</a>
-</li><li class="nav-item active">
-    <a class="nav-link" href="/site/reporting-status">Reporting Status</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/about">About</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/guidance">Guidance</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/faq">FAQ</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/publications/">Publications</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/news">Updates</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-other-indicators" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Other indicators
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-other-indicators"><li class=" ">
-    <a class="dropdown-item" href="/site/covid-indicators/">Covid indicators</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/gdp-indicators/">GDP indicators</a>
-</li></ul>
-            </li></ul>
-    
-                </div>
-                <div class="header-search-bar">
-                    <form class="align-self-lg-end" id="search" action="/site/search/">
-    <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
-        <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </span>
-    </div>
-</form>
+      <div class="mobile-widgets">
+    <ul id='accessibility-nav' class='contrast-switcher'>
+        
 
-                </div>
-                <div class="header-toggles d-flex"><a title="Enable high contrast" aria-label="Enable high contrast"
-    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
->A</a>
-                </div>
-            </div>
-        </nav>
+
+        >A</a>
+    </li>
+
+
+    </ul></div>
     </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+      <ul class="top-level">
+    <li id="menuToggle"
+        aria-label="Menu toggle. Click to expand or collapse the menu."
+        aria-haspopup="true">
+        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
+        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/site/goals">Goals</a>
+</li><li class="nav-link active">
+    <a href="/site/reporting-status">Reporting Status</a>
+</li><li class="nav-link ">
+    <a href="/site/about">About</a>
+</li><li class="nav-link ">
+    <a href="/site/guidance">Guidance</a>
+</li><li class="nav-link ">
+    <a href="/site/faq">FAQ</a>
+</li><li class="nav-link ">
+    <a href="/site/publications">Publications</a>
+</li><li class="nav-link ">
+    <a href="/site/news">Updates</a>
+</li><li class="nav-link ">
+    <a href="/site/covid-indicators/">Covid indicators</a>
+</li><li class="nav-link ">
+    <a href="/site/gdp-indicators/">GDP indicators</a>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+    </li>
+    <li id="searchToggle"
+        aria-label="Search toggle. Click to expand or collapse the search bar."
+        aria-haspopup="true">
+        <button data-target="search-mobile" aria-expanded="false">Search</button>
+        <div id="search-mobile" class="menu-target">
+  <form action="/site/search/">
+    <label class="sr-only" for="indicator_search-mobile">Search</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
+    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+    </li>
+</ul>
+      <div id="search" class="menu-target">
+  <form action="/site/search/">
+    <label class="sr-only" for="indicator_search">Search</label>
+    <input type="text" name="q" id="indicator_search" title="Search" /><!--
+    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/site/goals">Goals</a>
+</li><li class="nav-link active">
+    <a href="/site/reporting-status">Reporting Status</a>
+</li><li class="nav-link ">
+    <a href="/site/about">About</a>
+</li><li class="nav-link ">
+    <a href="/site/guidance">Guidance</a>
+</li><li class="nav-link ">
+    <a href="/site/faq">FAQ</a>
+</li><li class="nav-link ">
+    <a href="/site/publications">Publications</a>
+</li><li class="nav-link ">
+    <a href="/site/news">Updates</a>
+</li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Other indicators
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/site/covid-indicators/">Covid indicators</a>
+</li><li class="nav-link ">
+    <a href="/site/gdp-indicators/">GDP indicators</a>
+</li></ul>
+            </div>
+        </li>
+
+
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+    </nav>
+  </div>
+
 </header>
 <div id="top" tabindex=-1></div>
 
@@ -239,16 +363,9 @@ data-event-label="high"
 
 
 
-<div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        <li class="breadcrumb-item" >
-            <a href="/site/">Home</a>
-        </li>
-        <li class="breadcrumb-item active"></li>
-    </ol>
-</nav>
-</div>
+
+
+
 <div id="main-content" class="container reportingstatus" role="main">
 
   <h1>
@@ -265,25 +382,24 @@ data-event-label="high"
 
 
 
-  <div>
   
   <ul class="nav nav-tabs reporting-status-view" role="tablist">
     <li role="presentation" class="nav-item active">
-      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#goalsview" aria-controls="goalsview" role="tab" data-on="click"
+      <a class="nav-link" data-toggle="tab" href="#goalsview" aria-controls="goals" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change reporting status view"
 data-event-label="Change reporting status view to goals"
->Reporting status</button>
+>Reporting status</a>
     </li>
     
 
     
       <li role="presentation" class="nav-item">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#disaggregationsview" aria-controls="disaggregationsview" role="tab" data-on="click"
+        <a class="nav-link" data-toggle="tab" href="#disaggregationsview" aria-controls="disaggregations" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change reporting status view"
 data-event-label="Change reporting status view to disaggregations"
->Disaggregation status</button>
+>Disaggregation status</a>
       </li>
       
 
@@ -300,28 +416,20 @@ data-event-label="Change reporting status view to disaggregations"
         <h2 class="status-goal">
             Overall reporting status
         </h2>
-        <span class="total"><span>247</span> indicators</span>
+        <span class="total"><span>249</span> indicators</span>
         <div class="summary">
             <div class="statuses">
             
             <div>
-                <span class="status complete"><span class="status-inner">82</span></span><strong>Reported online</strong><span class="value">33%</span>
+                <span class="status complete"><span class="status-inner">102</span></span><strong>Reported online</strong><span class="value">41%</span>
             </div>
+            
             
             
             <div>
-                <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                <span class="status notstarted"><span class="status-inner">147</span></span><strong>Exploring data sources</strong><span class="value">59%</span>
             </div>
             
-            
-            <div>
-                <span class="status notstarted"><span class="status-inner">165</span></span><strong>Exploring data sources</strong><span class="value">67%</span>
-            </div>
-            
-            
-            <div>
-                <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-            </div>
             <br style="clear:both;">
             </div>
         </div>
@@ -330,25 +438,15 @@ data-event-label="Change reporting status view to disaggregations"
             
             
             
-            <span class="complete" style="width:33.19838056680162%" title="Reported online: 33%"></span>
+            <span class="complete" style="width:40.963855421686745%" title="Reported online: 41%"></span>
             
             
             
             
             
-            <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
             
+            <span class="notstarted" style="width:59.03614457831325%" title="Exploring data sources: 59%"></span>
             
-            
-            
-            
-            <span class="notstarted" style="width:66.80161943319838%" title="Exploring data sources: 67%"></span>
-            
-            
-            
-            
-            
-            <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
             </div>
     </div>
     <br style="clear:both;">
@@ -368,23 +466,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">7</span></span><strong>Reported online</strong><span class="value">54%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">69%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">31%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">46%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -393,25 +483,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:53.84615384615384%" title="Reported online: 54%"></span>
+                <span class="complete" style="width:69.23076923076923%" title="Reported online: 69%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:30.76923076923077%" title="Exploring data sources: 31%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:46.15384615384615%" title="Exploring data sources: 46%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -435,19 +515,11 @@ data-event-label="Change reporting status view to disaggregations"
                 </div>
                 
                 
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
-                
                 
                 <div>
                     <span class="status notstarted"><span class="status-inner">9</span></span><strong>Exploring data sources</strong><span class="value">64%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -462,19 +534,9 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
-                
-                
-                
-                
                 
                 <span class="notstarted" style="width:64.28571428571429%" title="Exploring data sources: 64%"></span>
                 
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -489,28 +551,20 @@ data-event-label="Change reporting status view to disaggregations"
         <h3 class="status-goal">
             <a href="/site/3">Good health and well-being</a>
         </h3>
-        <span class="total">28 indicators</span>
+        <span class="total">30 indicators</span>
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">10</span></span><strong>Reported online</strong><span class="value">36%</span>
+                    <span class="status complete"><span class="status-inner">12</span></span><strong>Reported online</strong><span class="value">40%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">18</span></span><strong>Exploring data sources</strong><span class="value">60%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">18</span></span><strong>Exploring data sources</strong><span class="value">64%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -519,25 +573,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:35.714285714285715%" title="Reported online: 36%"></span>
+                <span class="complete" style="width:40.0%" title="Reported online: 40%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:60.0%" title="Exploring data sources: 60%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:64.28571428571429%" title="Exploring data sources: 64%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -557,23 +601,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported online</strong><span class="value">50%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">75%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Exploring data sources</strong><span class="value">25%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -582,25 +618,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
+                <span class="complete" style="width:75.0%" title="Reported online: 75%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:25.0%" title="Exploring data sources: 25%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -624,19 +650,11 @@ data-event-label="Change reporting status view to disaggregations"
                 </div>
                 
                 
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
-                
                 
                 <div>
                     <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">57%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -651,19 +669,9 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
-                
-                
-                
-                
                 
                 <span class="notstarted" style="width:57.14285714285714%" title="Exploring data sources: 57%"></span>
                 
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -683,23 +691,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">36%</span>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported online</strong><span class="value">55%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">5</span></span><strong>Exploring data sources</strong><span class="value">45%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">7</span></span><strong>Exploring data sources</strong><span class="value">64%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -708,25 +708,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:36.36363636363637%" title="Reported online: 36%"></span>
+                <span class="complete" style="width:54.54545454545454%" title="Reported online: 55%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:45.45454545454545%" title="Exploring data sources: 45%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:63.63636363636364%" title="Exploring data sources: 64%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -746,23 +736,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">50%</span>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">67%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Exploring data sources</strong><span class="value">33%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -771,25 +753,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
+                <span class="complete" style="width:66.66666666666666%" title="Reported online: 67%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:33.33333333333333%" title="Exploring data sources: 33%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -797,12 +769,12 @@ data-event-label="Change reporting status view to disaggregations"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/8">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" alt="Decent work and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/site/8">Decent work and economic growth</a>
+            <a href="/site/8">Decent jobs and economic growth</a>
         </h3>
         <span class="total">16 indicators</span>
         <div class="summary">
@@ -813,19 +785,11 @@ data-event-label="Change reporting status view to disaggregations"
                 </div>
                 
                 
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
-                
                 
                 <div>
                     <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -840,19 +804,9 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
-                
-                
-                
-                
                 
                 <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
                 
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -872,23 +826,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">25%</span>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported online</strong><span class="value">50%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">9</span></span><strong>Exploring data sources</strong><span class="value">75%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -897,25 +843,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:25.0%" title="Reported online: 25%"></span>
+                <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:75.0%" title="Exploring data sources: 75%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -935,86 +871,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">21%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">11</span></span><strong>Exploring data sources</strong><span class="value">79%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:21.428571428571427%" title="Reported online: 21%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:78.57142857142857%" title="Exploring data sources: 79%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                </div>
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/site/11">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities and communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/site/11">Sustainable cities and communities</a>
-        </h3>
-        <span class="total">14 indicators</span>
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">29%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
                 
                 
                 <div>
                     <span class="status notstarted"><span class="status-inner">10</span></span><strong>Exploring data sources</strong><span class="value">71%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1029,7 +894,47 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
+                
+                <span class="notstarted" style="width:71.42857142857143%" title="Exploring data sources: 71%"></span>
+                
+                </div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/site/11">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/site/11">Sustainable cities & communities</a>
+        </h3>
+        <span class="total">14 indicators</span>
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">29%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">10</span></span><strong>Exploring data sources</strong><span class="value">71%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:28.57142857142857%" title="Reported online: 29%"></span>
+                
                 
                 
                 
@@ -1037,11 +942,6 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 <span class="notstarted" style="width:71.42857142857143%" title="Exploring data sources: 71%"></span>
                 
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1061,23 +961,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">1</span></span><strong>Reported online</strong><span class="value">8%</span>
+                    <span class="status complete"><span class="status-inner">2</span></span><strong>Reported online</strong><span class="value">15%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">11</span></span><strong>Exploring data sources</strong><span class="value">85%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">12</span></span><strong>Exploring data sources</strong><span class="value">92%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1086,25 +978,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:7.692307692307693%" title="Reported online: 8%"></span>
+                <span class="complete" style="width:15.384615384615385%" title="Reported online: 15%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:84.61538461538461%" title="Exploring data sources: 85%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:92.3076923076923%" title="Exploring data sources: 92%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1124,23 +1006,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">1</span></span><strong>Reported online</strong><span class="value">13%</span>
+                    <span class="status complete"><span class="status-inner">2</span></span><strong>Reported online</strong><span class="value">25%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">75%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">7</span></span><strong>Exploring data sources</strong><span class="value">88%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1149,25 +1023,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:12.5%" title="Reported online: 13%"></span>
+                <span class="complete" style="width:25.0%" title="Reported online: 25%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:75.0%" title="Exploring data sources: 75%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:87.5%" title="Exploring data sources: 88%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1187,23 +1051,15 @@ data-event-label="Change reporting status view to disaggregations"
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">2</span></span><strong>Reported online</strong><span class="value">20%</span>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">40%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">60%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">80%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1212,25 +1068,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:20.0%" title="Reported online: 20%"></span>
+                <span class="complete" style="width:40.0%" title="Reported online: 40%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:60.0%" title="Exploring data sources: 60%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:80.0%" title="Exploring data sources: 80%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1254,19 +1100,11 @@ data-event-label="Change reporting status view to disaggregations"
                 </div>
                 
                 
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
-                
                 
                 <div>
                     <span class="status notstarted"><span class="status-inner">11</span></span><strong>Exploring data sources</strong><span class="value">79%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1281,19 +1119,9 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
-                
-                
-                
-                
                 
                 <span class="notstarted" style="width:78.57142857142857%" title="Exploring data sources: 79%"></span>
                 
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1301,35 +1129,27 @@ data-event-label="Change reporting status view to disaggregations"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/16">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" alt="Peace, justice and strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/site/16">Peace, justice and strong institutions</a>
+            <a href="/site/16">Peace and justice - strong institutions</a>
         </h3>
         <span class="total">24 indicators</span>
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">38%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported online</strong><span class="value">46%</span>
                 </div>
+                
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">13</span></span><strong>Exploring data sources</strong><span class="value">54%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">15</span></span><strong>Exploring data sources</strong><span class="value">63%</span>
-                </div>
-                
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1338,25 +1158,15 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="complete" style="width:37.5%" title="Reported online: 38%"></span>
+                <span class="complete" style="width:45.83333333333333%" title="Reported online: 46%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
                 
+                <span class="notstarted" style="width:54.16666666666666%" title="Exploring data sources: 54%"></span>
                 
-                
-                
-                
-                <span class="notstarted" style="width:62.5%" title="Exploring data sources: 63%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1380,19 +1190,11 @@ data-event-label="Change reporting status view to disaggregations"
                 </div>
                 
                 
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>Statistics in progress</strong><span class="value">0%</span>
-                </div>
-                
                 
                 <div>
                     <span class="status notstarted"><span class="status-inner">17</span></span><strong>Exploring data sources</strong><span class="value">71%</span>
                 </div>
                 
-                
-                <div>
-                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
@@ -1407,19 +1209,9 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 
-                <span class="inprogress" style="width:0.0%" title="Statistics in progress: 0%"></span>
-                
-                
-                
-                
                 
                 <span class="notstarted" style="width:70.83333333333334%" title="Exploring data sources: 71%"></span>
                 
-                
-                
-                
-                
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1438,7 +1230,7 @@ data-event-label="Change reporting status view to disaggregations"
         <h2 class="status-goal">
             Overall disaggregation status
         </h2>
-        <span class="total"><span>247</span> indicators</span>
+        <span class="total"><span>249</span> indicators</span>
         <div class="summary">
             <div class="statuses">
             
@@ -1458,7 +1250,7 @@ data-event-label="Change reporting status view to disaggregations"
             
             
             <div>
-                <span class="status notapplicable"><span class="status-inner">237</span></span><strong>Out of scope</strong><span class="value">96%</span>
+                <span class="status notapplicable"><span class="status-inner">239</span></span><strong>Out of scope</strong><span class="value">96%</span>
             </div>
             <br style="clear:both;">
             </div>
@@ -1468,13 +1260,13 @@ data-event-label="Change reporting status view to disaggregations"
             
             
             
-            <span class="complete" style="width:2.42914979757085%" title="Fully disaggregated: 2%"></span>
+            <span class="complete" style="width:2.4096385542168677%" title="Fully disaggregated: 2%"></span>
             
             
             
             
             
-            <span class="inprogress" style="width:1.6194331983805668%" title="Partially disaggregated: 2%"></span>
+            <span class="inprogress" style="width:1.606425702811245%" title="Partially disaggregated: 2%"></span>
             
             
             
@@ -1486,7 +1278,7 @@ data-event-label="Change reporting status view to disaggregations"
             
             
             
-            <span class="notapplicable" style="width:95.95141700404858%" title="Out of scope: 96%"></span>
+            <span class="notapplicable" style="width:95.9839357429719%" title="Out of scope: 96%"></span>
             </div>
     </div>
     <br style="clear:both;">
@@ -1627,7 +1419,7 @@ data-event-label="Change reporting status view to disaggregations"
         <h3 class="status-goal">
             <a href="/site/3">Good health and well-being</a>
         </h3>
-        <span class="total">28 indicators</span>
+        <span class="total">30 indicators</span>
         <div class="summary">
             <div class="statuses">
                 
@@ -1647,7 +1439,7 @@ data-event-label="Change reporting status view to disaggregations"
                 
                 
                 <div>
-                    <span class="status notapplicable"><span class="status-inner">28</span></span><strong>Out of scope</strong><span class="value">100%</span>
+                    <span class="status notapplicable"><span class="status-inner">30</span></span><strong>Out of scope</strong><span class="value">100%</span>
                 </div>
                 <br style="clear:both;">
             </div>
@@ -1935,12 +1727,12 @@ data-event-label="Change reporting status view to disaggregations"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/8">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" alt="Decent work and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/site/8">Decent work and economic growth</a>
+            <a href="/site/8">Decent jobs and economic growth</a>
         </h3>
         <span class="total">16 indicators</span>
         <div class="summary">
@@ -2124,12 +1916,12 @@ data-event-label="Change reporting status view to disaggregations"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/11">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities and communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/site/11">Sustainable cities and communities</a>
+            <a href="/site/11">Sustainable cities & communities</a>
         </h3>
         <span class="total">14 indicators</span>
         <div class="summary">
@@ -2439,12 +2231,12 @@ data-event-label="Change reporting status view to disaggregations"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/16">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" alt="Peace, justice and strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/site/16">Peace, justice and strong institutions</a>
+            <a href="/site/16">Peace and justice - strong institutions</a>
         </h3>
         <span class="total">24 indicators</span>
         <div class="summary">
@@ -2572,59 +2364,60 @@ data-event-label="Change reporting status view to disaggregations"
   </div>
   
 
-  </div>
-  <a href="#top">Back to top</a>
+  <!---->
+
 </div>
+
 <footer role="contentinfo">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="footerLinks">
-                    <ul>
-                        <li>
-                            <a href="https://open-sdg.org">Built using Open SDG</a>
-                        </li>
-                        
-                        <li>
-                            
-                            <a href="mailto:sdg.secretariat@statsghana.gov.gh" target="_blank">Contact us</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://twitter.com/statsghana" target="_blank">Twitter</a>
-                            
-                        </li>
-                        <li>
-                            
-                            <a href="https://www.facebook.com/statsghana/" target="_blank">Facebook</a>
-                            
-                        </li>
-                        <li>
-                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
-                            
-                        </li>
-                        
-                        
-                        
-                        <li>
-                            <a href="/site/config">Configuration</a>
-                        </li>
-                        </ul>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
+            
+              <li>
+                
+                  <a href="mailto:sdg.secretariat@statsghana.gov.gh" target="_blank">Contact us</a>
+                
+                </li>
+              <li>
+                
+                  <a href="https://twitter.com/statsghana" target="_blank">Twitter</a>
+                
+                </li>
+              <li>
+                
+                  <a href="https://www.facebook.com/statsghana/" target="_blank">Facebook</a>
+                
+                </li>
+              <li>
+                <a href="/site/about/cookies-and-privacy/">Cookies</a>
+                
+                </li>
+              
+            
+            
+            <li><a href="/site/config">Configuration</a></li>
+            </ul>
         </div>
-        
+      </div>
     </div>
+    
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -2644,12 +2437,12 @@ data-event-label="Change reporting status view to disaggregations"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20220727102742'></script>
+<script src='/site/assets/js/sdg.js?v=20220922091530'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20220727102742"></script><script>
+    <script src="/site/assets/js/custom.js?v=20220922091530"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -2657,3 +2450,4 @@ data-event-label="Change reporting status view to disaggregations"
 
 </body>
 </html>
+
