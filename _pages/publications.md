@@ -10,7 +10,7 @@ If you have any feedback on our publications please contact us at sdg.secretaria
 
 ### All goals
 
-###[Ghana SDGs Indicator Baseline Report 2018, 6 September 2018](http://www.gh.undp.org/content/dam/ghana/docs/Reports/UNDP_GH_IGC_SDGs_%20Indicator_%20Baseline_Report_2018.pdf).
+### [Ghana SDGs Indicator Baseline Report 2018, 6 September 2018](http://www.gh.undp.org/content/dam/ghana/docs/Reports/UNDP_GH_IGC_SDGs_%20Indicator_%20Baseline_Report_2018.pdf).
 This is the first Sustainable Development Goals (SDGs) Indicator Baseline report for Ghana. The report provides a baseline status for a set of SDGs indicators and serves as a reference point for tracking progress on the achievement of the SDGs and the corresponding Africa Union’s Agenda 2063.
 
 ### [Ghana’s SDG Budget Baseline Report, 2018, 9 August 2018](https://www.mofep.gov.gh/sites/default/files/news/Ghana%27s-SDG-Budget-Baseline-Report-Aug-09-18.pdf). 
