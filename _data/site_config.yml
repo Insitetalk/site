@@ -17,7 +17,7 @@ breadcrumbs:
     - path: /
       label: general.home
     - path: /news
-      label: menu.news
+      label: menu.updates
 contrast_type: default
 country:
   name: Ghana
@@ -122,22 +122,8 @@ frontpage_goals_grid:
 frontpage_heading: ''
 frontpage_instructions: ''
 frontpage_introduction_banner:
-  title: 17 goals to transform our world
-  description: >-
-    Welcome to the home of Ghanaian data for <a href="https://sdgs.un.org/goals">the Sustainable Development Goals (SDGs)</a>
-    – reported by <a href="https://www.statsghana.gov.gh/">Ghana Statistical Service</a>, 
-    Ghana's national statistics institute.
-    
-    
-    The Sustainable Development Goals (SDGs) are a universal call to action
-    to end poverty, protect the planet and improve the lives and prospects
-    of everyone, everywhere. The 17 Goals
-    were adopted by all UN Member States in 2015, as part of the <a
-    href="https://sdgs.un.org/2030agenda">2030 Agenda for Sustainable
-    Development</a>.
-    
-    
-    Ghanaian data for the Sustainable Development Goals are collated and reported here.
+  title: frontpage.intro_title
+  description: frontpage.intro_body
 goal_image_base: 'https://open-sdg.org/sdg-translations/assets/img/goals'
 goal_image_extension: ''
 goals_page:
@@ -152,9 +138,9 @@ graph_title_from_series: true
 header:
   include: header-default.html
 header_language_toggle: dropdown
-hide_empty_metadata: true
+hide_empty_metadata: false
 indicator_config_form:
-  enabled: false
+  enabled: true
   dropdowns: []
   repository_link: 'https://github.com/sdg-ghana/data/tree/develop/indicator-config'
   translation_link: ''
@@ -189,7 +175,7 @@ map_layers:
     max_zoom: 8
     staticBorders: false
 map_options:
-  minZoom: 5
+  minZoom: 0
   maxZoom: 10
   tileURL: 'https://{s}.tile.jawg.io/{id}/{z}/{x}/{y}{r}.png?access-token={accessToken}'
   tileOptions:
@@ -201,7 +187,7 @@ map_options:
       href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
       contributors
   colorRange: chroma.brewer.BuGn
-  noValueColor: '#ffffcc'
+  noValueColor: '#f0f0f0'
   styleNormal:
     weight: 1
     opacity: 1
@@ -240,7 +226,7 @@ menu:
     translation_key: menu.publications
     dropdown: []
   - path: /news
-    translation_key: News
+    translation_key: menu.updates
     dropdown: []
   - path: /about
     translation_key: Other indicators
@@ -256,26 +242,8 @@ news:
 non_global_metadata: indicator.national_metadata
 remote_data_prefix: 'https://sdg-ghana.github.io/data/'
 reporting_status:
-  title: 'Reporting Status'
-  description: 'Reporting status provides an overview of how much Sustainable Development
-    Goal (SDG) data Ghana reports. For more information, see [What does the
-    reporting status
-    mean?](https://sdgs-ghana.github.io/faq/#what-does-the-reporting-status-mean)
-    
-    
-    Disaggregation status provides an overview of how many of the SDG indicators
-    are disaggregated. For more information, see [What does the disaggregation
-    status
-    mean?](https://sdgs-ghana.github.io/faq/#what-does-the-disaggregation-status-mean)
-    
-    
-    For details about all available disaggregations and how each indicator is
-    disaggregated, see the [Ghana disaggregation
-    report](https://sdgs-ghana.github.io/production-data/disaggregations.html).
-    
-    
-    Note: These percentages have been rounded. As a result, adding them together
-    may not equal exactly 100%.'
+  title: ''
+  description: ''
   disaggregation_tabs: true
 search_index_boost: []
 search_index_extra_fields: []
