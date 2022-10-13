@@ -54,7 +54,7 @@ custom_css:
   - /assets/css/custom.css
 custom_js:
   - /assets/js/custom.js
-data_edit_url: 'http://prose.io/#sdg-ghana/data/edit/develop/data/indicator_[id].csv'
+data_edit_url: 'http://prose.io/#insitetalk/data/edit/develop/data/indicator_[id].csv'
 data_fields:
   units: UNIT_MEASURE
   series: SERIES
