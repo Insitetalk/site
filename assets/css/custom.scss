@@ -1,9 +1,6 @@
 ---
 # Enter any custom Sass in this file.
 ---
-
-#national h1 { display: none }
-
   @media only screen and (min-width: 700px)
 .site-intro {
   padding-right: 300px;
@@ -17,3 +14,6 @@
   background-size: 180px;
   background-repeat: no-repeat;
 }
+
+#national h1 { display: none }
+
