@@ -6,6 +6,8 @@
   padding: 15px;
   height: auto;
 }
+
+# _frontpage_intro.
 .site-intro {
     margin-top: 20px;
     .description{
@@ -25,4 +27,26 @@
         background-size: 180px;
         background-repeat: no-repeat;
     }
+}
+
+# Back to the top
+#main-content {
+  a[href="#top"] {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-right: 15px;
+    text-align: right;
+    width: 100%;
+    .app-c-back-to-top__icon {
+      margin-right: .3em;
+      width: .8em;
+      height: .968em;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+#top:focus {
+  outline: none !important;
 }
