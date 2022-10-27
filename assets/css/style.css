@@ -3373,23 +3373,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
     .site-intro {
       padding-right: 300px;
       min-height: 180px;
-      background: url("../img/Wheel_Transparent-01.png");
+      background: url("../img/SDG_Wheel_Transparent-01.png");
       background-position: right 60px top;
       background-size: 180px;
       background-repeat: no-repeat; } }
-
-#main-content a[href="#top"] {
-  display: inline-block;
-  margin-bottom: 15px;
-  margin-top: 30px;
-  margin-right: 15px;
-  text-align: right;
-  width: 100%; }
-  #main-content a[href="#top"] .app-c-back-to-top__icon {
-    margin-right: .3em;
-    width: .8em;
-    height: .968em;
-    margin-bottom: 3px; }
-
-#top:focus {
-  outline: none !important; }

@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://insitetalk.github.io/data/en',
+  remoteDataBaseUrl: 'https://sdg-ghana.github.io/data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221027023128">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221027180248">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221027023128">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221027180248">
         
 
         
@@ -222,6 +222,8 @@ data-event-label="high"
         aria-haspopup="true">
         <button data-target="menu-mobile" aria-expanded="false">Menu</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/site/">{"about"=>"About", "contact_us"=>"Contact us", "cookies"=>"Cookies", "faq"=>"FAQ", "guidance"=>"Guidance", "menu"=>"Menu", "publications"=>"Publications", "reporting_status"=>"Reporting Status", "updates"=>"Updates"}</a>
+</li><li class="nav-link ">
     <a href="/site/goals">Goals</a>
 </li><li class="nav-link ">
     <a href="/site/reporting-status">Reporting Status</a>
@@ -296,6 +298,8 @@ data-event-label="high"
 </div>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/site/">{"about"=>"About", "contact_us"=>"Contact us", "cookies"=>"Cookies", "faq"=>"FAQ", "guidance"=>"Guidance", "menu"=>"Menu", "publications"=>"Publications", "reporting_status"=>"Reporting Status", "updates"=>"Updates"}</a>
+</li><li class="nav-link ">
     <a href="/site/goals">Goals</a>
 </li><li class="nav-link ">
     <a href="/site/reporting-status">Reporting Status</a>
@@ -501,7 +505,7 @@ data-event-label="high"
   data-id="11-6-1"
   data-country="Ghana"
   data-charttitle="Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities"
-  data-charttitles="[]"
+  data-charttitles="[{&quot;series&quot;:&quot;Proportion of urban solid waste regularly collected&quot;,&quot;title&quot;:&quot;Proportion of urban solid waste regularly collected&quot;}]"
   data-measurementunit="Percent"
   data-xaxislabel=""
   data-showdata="true"
@@ -544,9 +548,9 @@ data-event-label="high"
 
   <div id="datatables">
 
-    <a href="https://insitetalk.github.io/data/en/headline/11-6-1.csv" class="btn btn-primary btn-download" download="indicator_11-6-1.csv" tabindex="0" role="button">Download Headline CSV</a>
+    <a href="https://sdg-ghana.github.io/data/en/headline/11-6-1.csv" class="btn btn-primary btn-download" download="indicator_11-6-1.csv" tabindex="0" role="button">Download Headline CSV</a>
 
-    <a href="https://insitetalk.github.io/data/en/data/11-6-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_11-6-1.csv' tabindex='0' role='button'>Download Source CSV</a>
+    <a href="https://sdg-ghana.github.io/data/en/data/11-6-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_11-6-1.csv' tabindex='0' role='button'>Download Source CSV</a>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -700,7 +704,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities</h4>
+          <h4 id="chart-heading" class="chart-title">Proportion of urban solid waste regularly collected</h4>
           <div id="chart" class="plot-container">
             
               
@@ -1154,7 +1158,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Goal </th>
         <td>
           
-            <h1><a href="https://sustainabledevelopment-ghana.github.io/sustainable-cities-communities">Goal 11: Make cities and human settlements inclusive, safe, resilient and sustainable </a></h1>
+            <p>Goal 11: Make cities and human settlements inclusive, safe, resilient and sustainable</p>
 
           
         </td>
@@ -1186,7 +1190,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator </th>
         <td>
           
-            <h2>Indicator 11.6.1: Proportion of urban solid waste regularly collected and with adequate final discharge out of total urban solid waste generated, by cities</h2>
+            <p>Indicator 11.6.1: Proportion of urban solid waste regularly collected and with adequate final discharge out of total urban solid waste generated, by cities</p>
 
           
         </td>
@@ -1311,6 +1315,22 @@ data-event-label="Change to Sources tab"
 <p>The Formality of MSWM activities is an important aspect to take into consideration when conducting the SDG indicator 11.6.1 assessment. MSWM activities are carried out by formal and informal economic units, both public and private, and by generators for the purpose of prevention, collection, transportation, treatment and disposal of waste.</p>
 <p>Formal waste management relates to waste management activities undertaken by units working within the context of the formal governmental or non-state actors regulating and operating waste management; that is, organisations or individuals registered as economic units with government authorities and assumed to generally abide by local laws and regulations related to wastes and their management. </p>
 <p> Informal waste management, recycling and recovery<strong> </strong>refers to waste management and recovery activities undertaken by individuals, economic units, or enterprises which are not sponsored, financed, recognised, supported, organised or acknowledged by the formal solid waste authorities, or which operate in violation of or in competition with formal authorities (Scheinberg et al., 2010). Informal units are assumed to abide by local waste-related laws and regulations when it is in their interests to do so.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Unit of measure </th>
+        <td>
+          
+            <p>Percent (%)</p>
 
           
         </td>
@@ -1482,25 +1502,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Metadata last updated </th>
         <td>
           
-            Oct 10, 2022
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-          
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
-          
-            Oct 10, 2022
+            Oct 21, 2022
           
         </td>
         </tr>
@@ -1664,7 +1666,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN designated tier </th>
         <td>
           
-            <p>II</p>
+            <p>Tier II</p>
 
           
         </td>
@@ -1842,7 +1844,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
 </table>
 
     </article>
@@ -1861,7 +1862,6 @@ data-event-label="Change to Sources tab"
     <div class="col-md-6">
       
       <table class="table">
-  
   
   
   
@@ -2263,12 +2263,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20221027023128'></script>
+<script src='/site/assets/js/sdg.js?v=20221027180248'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20221027023128"></script><script>
+    <script src="/site/assets/js/custom.js?v=20221027180248"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
