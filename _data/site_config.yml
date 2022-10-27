@@ -54,7 +54,7 @@ custom_css:
   - /assets/css/custom.css
 custom_js:
   - /assets/js/custom.js
-data_edit_url: 'http://prose.io/#sdg-ghana/data/edit/develop/data/indicator_[id].csv'
+data_edit_url: 'http://prose.io/#insitetalk/data/edit/develop/data/indicator_[id].csv'
 data_fields:
   units: UNIT_MEASURE
   series: SERIES
@@ -97,7 +97,7 @@ frontpage_cards:
       2018-2022](http://www.statsghana.gov.gh/docfiles/publications/NSDS%20II%20Ghana_Revised_16.03.18.pdf)
     include: ''
     button_label: More Publications
-    button_link: 'https://sdg-ghana.github.io/site/publications/'
+    button_link: 'https://insitetalk.github.io/site/publications/'
     rule_color: ''
   - title: Useful resources
     content: >
@@ -156,7 +156,7 @@ hide_empty_metadata: true
 indicator_config_form:
   enabled: false
   dropdowns: []
-  repository_link: 'https://github.com/sdg-ghana/data/tree/develop/indicator-config'
+  repository_link: 'https://github.com/insitetalk/data/tree/develop/indicator-config'
   translation_link: ''
 indicator_data_form:
   enabled: false
@@ -164,7 +164,7 @@ indicator_data_form:
 indicator_metadata_form:
   enabled: true
   dropdowns: []
-  repository_link: 'https://github.com/sdg-ghana/data/tree/develop/meta'
+  repository_link: 'https://github.com/insitetalk/data/tree/develop/meta'
   translation_link: 'https://hosted.weblate.org/languages/fr/sdg-translations/'
   language: en
   scopes:
@@ -257,7 +257,7 @@ metadata_tabs: []
 news:
   category_links: false
 non_global_metadata: indicator.national_metadata
-remote_data_prefix: 'https://sdg-ghana.github.io/data/'
+remote_data_prefix: 'https://insitetalk.github.io/data/'
 reporting_status:
   status_types:
     - value: complete
@@ -294,7 +294,7 @@ sharethis_property: ''
 site_config_form:
   enabled: true
   dropdowns: []
-  repository_link: 'https://github.com/sdg-ghana/site/tree/develop/_data'
+  repository_link: 'https://github.com/insitetalk/site/tree/develop/_data'
   translation_link: ''
 validate_indicator_config: false
 validate_site_config: true
