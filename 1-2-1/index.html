@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://sdg-ghana.github.io/data/en',
+  remoteDataBaseUrl: 'https://insitetalk.github.io/data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221109023137">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221109090132">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221109023137">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221109090132">
         
 
         
@@ -502,7 +502,7 @@ data-event-label="high"
   data-country="Ghana"
   data-charttitle="Proportion of population living below the national poverty line, by sex and age"
   data-charttitles="[]"
-  data-measurementunit="Percentage (%)"
+  data-measurementunit="Percent"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
@@ -544,9 +544,9 @@ data-event-label="high"
 
   <div id="datatables">
 
-    <a href="https://sdg-ghana.github.io/data/en/headline/1-2-1.csv" class="btn btn-primary btn-download" download="indicator_1-2-1.csv" tabindex="0" role="button">Download Headline CSV</a>
+    <a href="https://insitetalk.github.io/data/en/headline/1-2-1.csv" class="btn btn-primary btn-download" download="indicator_1-2-1.csv" tabindex="0" role="button">Download Headline CSV</a>
 
-    <a href="https://sdg-ghana.github.io/data/en/data/1-2-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_1-2-1.csv' tabindex='0' role='button'>Download Source CSV</a>
+    <a href="https://insitetalk.github.io/data/en/data/1-2-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_1-2-1.csv' tabindex='0' role='button'>Download Source CSV</a>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -654,16 +654,16 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
-    <p>Source: Ghana Statistical Service (GSS)</p>
+    <p>Source: Ghana Statistical Service</p>
     
     
     <p>Geographical Area: </p>
     
     
-    <p>Unit of Measurement: Percentage (%)</p>
+    <p>Unit of Measurement: Percent</p>
     
     
-    <p>Footnote: The 2020 figure of 25.5% is an estimate provided by the World Bank in the 2021 World Bank Macro Poverty Outlook Report.</p>
+    <p>Footnote: </p>
     
   </div>
 
@@ -1038,7 +1038,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Source:</dt>
-        <dd>Ghana Statistical Service (GSS)</dd>
+        <dd>Ghana Statistical Service</dd>
         
 
         
@@ -1048,9 +1048,6 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
-        
-        <dt>Footnote:</dt>
-        <dd>The 2020 figure of 25.5% is an estimate provided by the World Bank in the 2021 World Bank Macro Poverty Outlook Report.</dd>
         
 
         
@@ -1109,7 +1106,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Source:</dt>
-        <dd>Ghana Statistical Service (GSS)</dd>
+        <dd>Ghana Statistical Service</dd>
         
 
         
@@ -1119,9 +1116,6 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
-        
-        <dt>Footnote:</dt>
-        <dd>The 2020 figure of 25.5% is an estimate provided by the World Bank in the 2021 World Bank Macro Poverty Outlook Report.</dd>
         
 
         
@@ -1171,7 +1165,7 @@ opensdg.chartConfigAlter(function(config, info) {
     <dl>
         
         <dt>Source:</dt>
-        <dd>Ghana Statistical Service (GSS)</dd>
+        <dd>Ghana Statistical Service</dd>
         
 
         
@@ -1181,9 +1175,6 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
-        
-        <dt>Footnote:</dt>
-        <dd>The 2020 figure of 25.5% is an estimate provided by the World Bank in the 2021 World Bank Macro Poverty Outlook Report.</dd>
         
 
         
@@ -1348,7 +1339,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Related indicators </th>
         <td>
           
-            <p>Indicator 1.1.1: Proportion of the population living below the international poverty line, by sex, age, employment status and geographic location (urban/rural).</p>
+            <p>Indicator 1.1.1: Proportion of population below the international poverty line, by sex, age, employment status and geographical location (urban/rural).</p>
 
           
         </td>
@@ -1367,7 +1358,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p>Ghana Statistical Service (GSS)</p>
+            <p>Ghana Statistical Service</p>
 
           
         </td>
@@ -1420,7 +1411,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Unit of measure </th>
         <td>
           
-            <p>Percentage (%) </p>
+            <p>Percentage</p>
 
           
         </td>
@@ -1442,7 +1433,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data sources </th>
         <td>
           
-            <p> Ghana Living Standards Survey (GLSS Round 3 - Round 7)</p>
+            <p> Ghana Living Standards Survey</p>
 
           
         </td>
@@ -1480,7 +1471,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data providers </th>
         <td>
           
-            <p>Ghana Statistical Service (GSS)</p>
+            <p>Ghana Statistical Service</p>
 
           
         </td>
@@ -1496,7 +1487,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data compilers </th>
         <td>
           
-            <p>Ghana Statistical Service (GSS)</p>
+            <p>Ghana Statistical Service</p>
 
           
         </td>
@@ -1600,16 +1591,13 @@ data-event-label="Change to Sources tab"
           
       
         
-          
-      
-        
       
       
       <tr>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            Nov 03, 2022
+            Oct 10, 2022
           
         </td>
         </tr>
@@ -1951,7 +1939,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
 </table>
 
     </article>
@@ -2035,7 +2022,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
       
         
       
@@ -2044,7 +2030,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p>Ghana Statistical Service (GSS)</p>
+            <p>Ghana Statistical Service</p>
 
           
         </td>
@@ -2063,7 +2049,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>1992</p>
+            <p>2013</p>
 
           
         </td>
@@ -2368,12 +2354,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20221109023137'></script>
+<script src='/site/assets/js/sdg.js?v=20221109090132'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20221109023137"></script><script>
+    <script src="/site/assets/js/custom.js?v=20221109090132"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

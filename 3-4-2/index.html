@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://sdg-ghana.github.io/data/en',
+  remoteDataBaseUrl: 'https://insitetalk.github.io/data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221109023137">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221109090132">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221109023137">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221109090132">
         
 
         
@@ -544,9 +544,9 @@ data-event-label="high"
 
   <div id="datatables">
 
-    <a href="https://sdg-ghana.github.io/data/en/headline/3-4-2.csv" class="btn btn-primary btn-download" download="indicator_3-4-2.csv" tabindex="0" role="button">Download Headline CSV</a>
+    <a href="https://insitetalk.github.io/data/en/headline/3-4-2.csv" class="btn btn-primary btn-download" download="indicator_3-4-2.csv" tabindex="0" role="button">Download Headline CSV</a>
 
-    <a href="https://sdg-ghana.github.io/data/en/data/3-4-2.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_3-4-2.csv' tabindex='0' role='button'>Download Source CSV</a>
+    <a href="https://insitetalk.github.io/data/en/data/3-4-2.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_3-4-2.csv' tabindex='0' role='button'>Download Source CSV</a>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -1230,7 +1230,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Target </th>
         <td>
           
-            <p>Target 3.4: By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being</p>
+            <p>Target 3.4: By 2030, reduce by one third premature mortality from non-communicable diseases through<br />prevention and treatment and promote mental health and well-being</p>
 
           
         </td>
@@ -1268,7 +1268,20 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
           
+            <p>Ghana Statistical Service</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
@@ -1298,8 +1311,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Definition and concepts </th>
         <td>
           
-            <p><strong>Definition:</strong></p>
-<p>The Suicide mortality rate as defined as the number of suicide deaths in a year, divided by the population,<br />and multiplied by 100 000.</p>
+            <p>The Suicide mortality rate as defined as the number of suicide deaths in a year, divided by the population,<br />and multiplied by 100 000.</p>
 
           
         </td>
@@ -1315,7 +1327,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Unit of measure </th>
         <td>
           
-            <p>Per 100,000 population</p>
+            <p>Rate per 100 000 population</p>
 
           
         </td>
@@ -1337,7 +1349,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data sources </th>
         <td>
           
-            <p>Ghana Population and Housing Census, 2021</p>
+            <p>PHC 2021, Ghana statistical service </p>
 
           
         </td>
@@ -1362,7 +1374,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data providers </th>
         <td>
           
-            <p>Ghana Statistical Service (GSS)</p>
+            <p>Ghana statistical service</p>
 
           
         </td>
@@ -1372,7 +1384,20 @@ data-event-label="Change to Sources tab"
   
       
         
+      
+      
+      <tr>
+        <th scope="row">Data compilers </th>
+        <td>
           
+            <p>Ghana statistical service</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
@@ -1387,7 +1412,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Rationale </th>
         <td>
           
-            <p>Mental disorders occur in all regions and cultures of the world. The most prevalent of these disorders are depression and anxiety, which are estimated to affect nearly 1 in 10 people. At its worst, depression can lead to suicide. </p>
+            <p>Mental disorders occur in all regions and cultures of the world. The most prevalent of these disorders are depression and anxiety, which are estimated to affect nearly 1 in 10 people. At its worst, depression can lead to suicide. In 2019, there were over 700,000 estimated suicide deaths worldwide.</p>
 
           
         </td>
@@ -1400,7 +1425,20 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Method of computation </th>
+        <td>
           
+            <p>Suicide mortality rate (per 100,000 population) = (Number of suicide deaths in a year x 100,000) / Mid-<br />year population for the same calendar year</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
@@ -1443,7 +1481,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">References and Documentation </th>
         <td>
           
-            <p><a href="https://www.who.int/data/gho">http://www.who.int/gho/en/</a></p>
+            <p>http://www.who.int/gho/en/</p>
 
           
         </td>
@@ -1456,16 +1494,13 @@ data-event-label="Change to Sources tab"
           
       
         
-          
-      
-        
       
       
       <tr>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            Nov 08, 2022
+            Oct 12, 2022
           
         </td>
         </tr>
@@ -1807,7 +1842,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
 </table>
 
     </article>
@@ -1826,7 +1860,6 @@ data-event-label="Change to Sources tab"
     <div class="col-md-6">
       
       <table class="table">
-  
   
   
   
@@ -1995,7 +2028,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            Feb 02, 2022
+            Jan 01, 1970
           
         </td>
         </tr>
@@ -2237,12 +2270,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20221109023137'></script>
+<script src='/site/assets/js/sdg.js?v=20221109090132'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20221109023137"></script><script>
+    <script src="/site/assets/js/custom.js?v=20221109090132"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
