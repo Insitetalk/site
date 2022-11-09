@@ -254,7 +254,7 @@ metadata_tabs: []
 news:
   category_links: false
 non_global_metadata: indicator.national_metadata
-remote_data_prefix: 'https://sdg-ghana.github.io/data/'
+remote_data_prefix: 'https://insitetalk.github.io/data/'
 reporting_status:
   status_types:
     - value: complete
